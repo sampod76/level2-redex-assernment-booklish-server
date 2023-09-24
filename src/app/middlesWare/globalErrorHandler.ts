@@ -2,11 +2,11 @@
 /* eslint-disable no-unused-expressions */
 
 import { ErrorRequestHandler } from 'express'
-import config from '../../../src/config.ts/index'
+import config from '../../config/index'
 import { IGenericErrorMessage } from '../../interfaces/Ierror'
 import handleValidationError from '../../errors/handleValidationError'
 import ApiError from '../../errors/ApiError'
-import configTs from '../../../src/config.ts/index'
+import configTs from '../../config/index'
 // import { errorLogger } from '../../shared/logger'
 
 import  {ZodError} from "zod"

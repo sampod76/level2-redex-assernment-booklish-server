@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserService = void 0;
 /* eslint-disable no-console */
 const user_model_1 = require("./user.model");
-const index_1 = __importDefault(require("../../../config.ts/index"));
+const index_1 = __importDefault(require("../../../config/index"));
 const user_utils_1 = require("./user.utils");
 const ApiError_1 = __importDefault(require("../../../errors/ApiError"));
 const createUserServices = (user) => __awaiter(void 0, void 0, void 0, function* () {

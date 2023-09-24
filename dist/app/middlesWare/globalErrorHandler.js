@@ -5,10 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_1 = __importDefault(require("../../../src/config.ts/index"));
+const index_1 = __importDefault(require("../../config/index"));
 const handleValidationError_1 = __importDefault(require("../../errors/handleValidationError"));
 const ApiError_1 = __importDefault(require("../../errors/ApiError"));
-const index_2 = __importDefault(require("../../../src/config.ts/index"));
+const index_2 = __importDefault(require("../../config/index"));
 // import { errorLogger } from '../../shared/logger'
 const zod_1 = require("zod");
 const handleZodError_1 = __importDefault(require("../../errors/handleZodError"));

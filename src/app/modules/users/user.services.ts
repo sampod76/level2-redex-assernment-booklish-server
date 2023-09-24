@@ -2,7 +2,7 @@
 import { User } from './user.model';
 import { IUser } from './user.interface';
 
-import config from '../../../config.ts/index';
+import config from '../../../config/index';
 import { generateFacultyId,  } from './user.utils';
 import ApiError from '../../../errors/ApiError';
 
