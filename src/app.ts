@@ -7,7 +7,7 @@ import cors from 'cors';
 import GlobalHandler from './app/middlesWare/globalErrorHandler';
 
 import routes from './app/routes';
-import sendResponse from './shared/sendResponce';
+import sendResponse from './app/shared/sendResponce';
 
 
 // import { createUser } from './app/modules/users/users.services'

@@ -3,8 +3,8 @@ import {  Request, Response } from 'express';
 
 import { User } from './user.model';
 import { UserService } from './user.services';
-import catchAsync from '../../../shared/catchAsync';
-import sendResponse from '../../../shared/sendResponce';
+import catchAsync from '../../shared/catchAsync';
+import sendResponse from '../../shared/sendResponce';
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
   const user = req.body;

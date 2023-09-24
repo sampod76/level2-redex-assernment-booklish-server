@@ -6,13 +6,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = __importDefault(require("../../config/index"));
-const handleValidationError_1 = __importDefault(require("../../errors/handleValidationError"));
-const ApiError_1 = __importDefault(require("../../errors/ApiError"));
+const handleValidationError_1 = __importDefault(require("../errors/handleValidationError"));
+const ApiError_1 = __importDefault(require("../errors/ApiError"));
 const index_2 = __importDefault(require("../../config/index"));
 // import { errorLogger } from '../../shared/logger'
 const zod_1 = require("zod");
-const handleZodError_1 = __importDefault(require("../../errors/handleZodError"));
-const handleCastError_1 = __importDefault(require("../../errors/handleCastError"));
+const handleZodError_1 = __importDefault(require("../errors/handleZodError"));
+const handleCastError_1 = __importDefault(require("../errors/handleCastError"));
 const GlobalHandler = (error, req, res, next) => {
     index_2.default.env === "development" ? console.log("globalErrorHandler", error) : console.log("Error from globalError", error);
     let statusCode = 500;

@@ -19,7 +19,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const globalErrorHandler_1 = __importDefault(require("./app/middlesWare/globalErrorHandler"));
 const routes_1 = __importDefault(require("./app/routes"));
-const sendResponce_1 = __importDefault(require("./shared/sendResponce"));
+const sendResponce_1 = __importDefault(require("./app/shared/sendResponce"));
 // import { createUser } from './app/modules/users/users.services'
 const app = (0, express_1.default)();
 // const port = 3000

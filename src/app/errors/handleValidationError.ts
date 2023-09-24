@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
-import { IGenericErrorMessage } from "../interfaces/Ierror"
-import { IGenericResponse } from "../interfaces/ICommon";
+import { IGenericErrorMessage } from "../../interfaces/Ierror"
+import { IGenericResponse } from "../../interfaces/ICommon";
 
  const handleValidationError = (err: mongoose.Error.ValidationError):IGenericResponse => {
     const errors: IGenericErrorMessage[] = Object.values(err.errors).map(

@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 import mongoose from 'mongoose';
-import config from './config/index.js';
-import 'colors';
+
+
 
 import app from './app';
 import { Server } from 'http';
+import config from './config';
 
 process.on('uncaughtException', err => {
   console.log('UnCaught rejection is detected from serve.ts', err);

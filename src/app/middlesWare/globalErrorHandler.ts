@@ -3,15 +3,16 @@
 
 import { ErrorRequestHandler } from 'express'
 import config from '../../config/index'
-import { IGenericErrorMessage } from '../../interfaces/Ierror'
-import handleValidationError from '../../errors/handleValidationError'
-import ApiError from '../../errors/ApiError'
+
+import handleValidationError from '../errors/handleValidationError'
+import ApiError from '../errors/ApiError'
 import configTs from '../../config/index'
 // import { errorLogger } from '../../shared/logger'
 
 import  {ZodError} from "zod"
-import handleZodError from '../../errors/handleZodError'
-import handleCastError from '../../errors/handleCastError'
+import handleZodError from '../errors/handleZodError'
+import handleCastError from '../errors/handleCastError'
+import { IGenericErrorMessage } from '../../interfaces/Ierror'
 
 
 

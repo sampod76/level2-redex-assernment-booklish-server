@@ -4,7 +4,7 @@ import { IUser } from './user.interface';
 
 import config from '../../../config/index';
 import { generateFacultyId,  } from './user.utils';
-import ApiError from '../../../errors/ApiError';
+import ApiError from '../../errors/ApiError';
 
 const createUserServices = async (user: IUser): Promise<IUser | null> => {
   if (!user?.password) {

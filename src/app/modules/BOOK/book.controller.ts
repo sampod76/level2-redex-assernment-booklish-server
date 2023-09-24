@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import { Request, Response } from 'express';
-import catchAsync from '../../../shared/catchAsync';
-import sendResponse from '../../../shared/sendResponce';
-import pick from '../../../shared/pick';
+import catchAsync from '../../shared/catchAsync';
+import sendResponse from '../../shared/sendResponce';
+import pick from '../../shared/pick';
 import { BookService } from './book.services';
 import { IBook } from './book.interface';
 import { Book } from './book.model';

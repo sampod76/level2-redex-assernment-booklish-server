@@ -15,8 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.userController = void 0;
 const user_model_1 = require("./user.model");
 const user_services_1 = require("./user.services");
-const catchAsync_1 = __importDefault(require("../../../shared/catchAsync"));
-const sendResponce_1 = __importDefault(require("../../../shared/sendResponce"));
+const catchAsync_1 = __importDefault(require("../../shared/catchAsync"));
+const sendResponce_1 = __importDefault(require("../../shared/sendResponce"));
 const createUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const user = req.body;
     const result = yield user_services_1.UserService.createUserServices(user);

@@ -14,9 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 /* eslint-disable no-console */
 const mongoose_1 = __importDefault(require("mongoose"));
-const index_js_1 = __importDefault(require("./config/index.js"));
-require("colors");
 const app_1 = __importDefault(require("./app"));
+const config_1 = __importDefault(require("./config"));
 process.on('uncaughtException', err => {
     console.log('UnCaught rejection is detected from serve.ts', err);
     process.exit(1);
@@ -25,12 +24,12 @@ let server;
 function mainFUnction() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose_1.default.connect(index_js_1.default.data_url, {
+            yield mongoose_1.default.connect(config_1.default.data_url, {
                 dbName: 'Book-store',
             });
             console.log('db Connected successfully ');
-            server = app_1.default.listen(index_js_1.default.port, () => {
-                console.log(`server app listening on port ${index_js_1.default.port}`);
+            server = app_1.default.listen(config_1.default.port, () => {
+                console.log(`server app listening on port ${config_1.default.port}`);
             });
         }
         catch (error) {

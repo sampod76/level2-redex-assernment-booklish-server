@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { ZodError, ZodIssue } from 'zod';
-import { IGenericResponse } from '../interfaces/ICommon';
-import { IGenericErrorMessage } from '../interfaces/Ierror';
+import { IGenericResponse } from '../../interfaces/ICommon';
+import { IGenericErrorMessage } from '../../interfaces/Ierror';
+
 
 const handleZodError = (error: ZodError): IGenericResponse => {
   const statusCode = 400;

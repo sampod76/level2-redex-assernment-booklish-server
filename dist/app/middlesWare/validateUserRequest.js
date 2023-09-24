@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// eslint-disable-next-line no-unused-vars
 const validateRequest = (schema) => (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield schema.parseAsync({

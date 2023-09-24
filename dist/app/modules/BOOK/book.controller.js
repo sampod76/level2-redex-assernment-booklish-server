@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BookController = void 0;
-const catchAsync_1 = __importDefault(require("../../../shared/catchAsync"));
-const sendResponce_1 = __importDefault(require("../../../shared/sendResponce"));
-const pick_1 = __importDefault(require("../../../shared/pick"));
+const catchAsync_1 = __importDefault(require("../../shared/catchAsync"));
+const sendResponce_1 = __importDefault(require("../../shared/sendResponce"));
+const pick_1 = __importDefault(require("../../shared/pick"));
 const book_services_1 = require("./book.services");
 const book_model_1 = require("./book.model");
 const createBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {

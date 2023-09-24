@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IGenericErrorMessage } from "../interfaces/Ierror";
+import { IGenericErrorMessage } from "../../interfaces/Ierror";
 
 const handleCastError =(error:mongoose.Error.CastError)=>{
 
