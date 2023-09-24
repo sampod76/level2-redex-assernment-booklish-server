@@ -30,14 +30,14 @@ function mainFUnction() {
             yield mongoose_1.default.connect(config_ts_1.default.data_url, {
                 dbName: 'Book-store',
             });
-            console.log('db Connected successfully '.green.underline.bold);
+            console.log('db Connected successfully ');
             server = app_1.default.listen(config_ts_1.default.port, () => {
-                console.log(`server app listening on port ${config_ts_1.default.port}`.green.bold);
+                console.log(`server app listening on port ${config_ts_1.default.port}`);
             });
         }
         catch (error) {
             // const  {name,message,stack}=error;
-            console.log('failed to connect '.red.underline, error);
+            console.log('failed to connect ');
         }
         process.on('unhandledRejection', error => {
             // eslint-disable-next-line no-console

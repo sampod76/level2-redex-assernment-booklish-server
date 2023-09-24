@@ -19,8 +19,6 @@ const catchAsync_1 = __importDefault(require("../../../shared/catchAsync"));
 const sendResponce_1 = __importDefault(require("../../../shared/sendResponce"));
 const createUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const user = req.body;
-    // console.log(user, 'from controller=================');
-    // console.log('hitted', data);
     const result = yield user_services_1.UserService.createUserServices(user);
     if (result) {
         (0, sendResponce_1.default)(res, {
@@ -29,7 +27,6 @@ const createUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, voi
             statusCode: 200,
             data: result,
         });
-        // next()
     }
 }));
 const getUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {

@@ -28,6 +28,9 @@ const bookSchema = new mongoose_1.Schema({
     },
     reviews: {
         type: [String]
+    },
+    price: {
+        type: Number,
     }
 }, {
     timestamps: true,

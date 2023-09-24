@@ -21,14 +21,14 @@ async function mainFUnction() {
       dbName: 'Book-store',
     });
 
-    console.log('db Connected successfully '.green.underline.bold);
+    console.log('db Connected successfully ');
 
     server = app.listen(config.port, () => {
-      console.log(`server app listening on port ${config.port}`.green.bold);
+      console.log(`server app listening on port ${config.port}`);
     });
   } catch (error) {
     // const  {name,message,stack}=error;
-    console.log('failed to connect '.red.underline, error);
+    console.log('failed to connect ');
   }
 
   process.on('unhandledRejection', error => {

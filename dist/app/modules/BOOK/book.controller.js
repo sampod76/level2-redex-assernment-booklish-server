@@ -20,7 +20,6 @@ const book_services_1 = require("./book.services");
 const book_model_1 = require("./book.model");
 const createBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const BookData = req.body;
-    console.log('🚀 ~ file: book.controller.ts:11 ~ createBook ~ BookData:', BookData);
     const result = yield book_services_1.BookService.createBook(BookData);
     (0, sendResponce_1.default)(res, {
         statusCode: 200,
@@ -65,11 +64,9 @@ const updateBook = (0, catchAsync_1.default)((0, catchAsync_1.default)((req, res
         data: result,
     });
 })));
-//   with pagination ///
 const BookFilterableFields = ['searchTerm', 'title', 'genre', 'author'];
 const paginationFields = ['page', 'limit', 'sortBy', 'sortOrder'];
 const getBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // console.log('bbbbbbbbbbbbbbbbbbb');
     const result = yield book_model_1.Book.find({}).sort({ createdAt: -1 }).limit(10);
     res.status(200).json({
         success: true,
@@ -93,9 +90,7 @@ const getALLBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, voi
 const postReviews = (0, catchAsync_1.default)((0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const bookId = req.params.id;
     const review = req.body.review;
-    console.log('🚀 ~ file: book.controller.ts:107 ~ catchAsync ~ review:', review, bookId);
     const result = yield book_services_1.BookService.postReview(bookId, review);
-    console.log('🚀 ~ file: book.controller.ts:108 ~ catchAsync ~ result:', result);
     (0, sendResponce_1.default)(res, {
         statusCode: 201,
         success: true,

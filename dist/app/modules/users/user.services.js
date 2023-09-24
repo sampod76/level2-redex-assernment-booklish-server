@@ -24,13 +24,10 @@ const createUserServices = (user) => __awaiter(void 0, void 0, void 0, function*
     }
     const id = yield (0, user_utils_1.generateFacultyId)();
     user.id = id;
-    console.log(user, 'from services');
     const createdUser = yield user_model_1.User.create(user);
     if (!createdUser) {
         throw new ApiError_1.default(400, 'Failed to create new User');
     }
     return createdUser;
-    // return null
 });
 exports.UserService = { createUserServices };
-// export default { createUser}

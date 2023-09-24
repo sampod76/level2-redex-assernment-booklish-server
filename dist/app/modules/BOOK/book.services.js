@@ -31,10 +31,8 @@ const getSingleBooks = (id) => __awaiter(void 0, void 0, void 0, function* () {
     return result;
 });
 const deleteBook = (id, email) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log('🚀 ~ file: book.services.ts:20 ~ deleteBook ~ email:', email);
-    const matchBook = yield book_model_1.Book.findById(id);
-    if ((matchBook === null || matchBook === void 0 ? void 0 : matchBook.user) === email) {
-        console.log('🚀 ~ file: book.services.ts:25 ~ deleteBook ~ matchBook:', matchBook);
+    const findBook = yield book_model_1.Book.findById(id);
+    if ((findBook === null || findBook === void 0 ? void 0 : findBook.user) === email) {
         const result = yield book_model_1.Book.findByIdAndDelete(id);
         return result;
     }
@@ -75,7 +73,6 @@ const getALLBook = (filters, paginationOptions) => __awaiter(void 0, void 0, voi
         .sort(sortConditions)
         .skip(skip)
         .limit(limit);
-    // .select({ price: 1, name: 1 });
     const total = yield book_model_1.Book.countDocuments();
     return {
         meta: {

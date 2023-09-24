@@ -1,16 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// export const handleValidationError= (err:mongoose.Error.ValidationError)=>{
-// const errors:IGenericErrorMessage[]= Object.values(err.errors).map(
-//     (ele:mongoose.Error.ValidationError | mongoose.Error.CastError)=>{
-//         return {
-//             path:ele?.path,
-//             message:ele?.message
-//         }
-//     }
-// )
-// )
-// }
 const handleValidationError = (err) => {
     const errors = Object.values(err.errors).map((element) => {
         return {

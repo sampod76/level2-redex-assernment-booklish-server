@@ -1,33 +1,24 @@
-// .eslintrc
 {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module",
+      "ecmaVersion": 13,// current ecma version
+      "sourceType": "module"
     },
     "plugins": ["@typescript-eslint"],
-    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  
+    // HERE
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+
     "rules": {
-      "no-unused-vars": "error",
-      "prefer-const":"error",
-      "no-unused-expressions":"error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "no-undef":"error",
-      "no-console":"error",
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"] ,
-
-      // "@typescript-eslint/no-unused-vars": "error",
-      // to enforce using type for object type definitions, can be type or interface 
-
       // "no-unreachable":"error",
-      // // to enforce using type for object type definitions, can be type or interface 
-      //  "consistent-type-definitions": ["error", "type"]
+      // "no-console":"error"
     },
-  
     "env": {
       "browser": true,
       "es2021": true,
-      "node":true
+      "node": true
     },
     "globals": {
       "process":"readonly"

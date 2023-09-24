@@ -15,7 +15,8 @@ const createBookZodSchema = zod_1.z.object({
         }),
         publicationDate: zod_1.z.string({
             required_error: 'Book publicationDate is required',
-        })
+        }),
+        price: zod_1.z.number().optional()
     })
 });
 const updateBookZodSchema = zod_1.z.object({
@@ -31,7 +32,8 @@ const updateBookZodSchema = zod_1.z.object({
         }).optional(),
         publicationDate: zod_1.z.string({
             required_error: 'Book publicationDate is required',
-        }).optional()
+        }).optional(),
+        price: zod_1.z.number().optional()
     })
 });
 exports.BookValidation = { createBookZodSchema, updateBookZodSchema };
