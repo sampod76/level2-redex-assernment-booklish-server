@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 import config from './config.ts';
 import 'colors';
-// import { logger, errorLogger } from './shared/logger';
+
 import app from './app';
 import { Server } from 'http';
 
@@ -13,7 +13,6 @@ process.on('uncaughtException', err => {
 
 let server: Server;
 
-// console.log(config.data_url, 'config file'.red.bold);
 
 async function mainFUnction() {
   try {

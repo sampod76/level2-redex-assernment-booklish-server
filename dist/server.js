@@ -16,14 +16,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const config_ts_1 = __importDefault(require("./config.ts"));
 require("colors");
-// import { logger, errorLogger } from './shared/logger';
 const app_1 = __importDefault(require("./app"));
 process.on('uncaughtException', err => {
     console.log('UnCaught rejection is detected from serve.ts', err);
     process.exit(1);
 });
 let server;
-// console.log(config.data_url, 'config file'.red.bold);
 function mainFUnction() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
