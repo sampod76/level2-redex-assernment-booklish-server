@@ -1,0 +1,1 @@
+client_side=https://bookstoreclient.netlify.app/
